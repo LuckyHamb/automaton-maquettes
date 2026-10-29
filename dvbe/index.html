@@ -4,127 +4,251 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffc61a">
 <title>DVBE - Électricien à Rambouillet</title>
-<meta name="description" content="DVBE, Électricien à Rambouillet. Dépannage rapide, devis gratuit. Appelez le 06 20 45 56 46.">
+<meta name="description" content="DVBE, électricien à Rambouillet. Appelez le 06 20 45 56 46.">
 <style>
-:root{--accent:#f2a000;--on:#14202b;--light:#ffc233;--ink:#14202b;--mute:#4f5f6e;--bg:#f6f8fa;--card:#fff;--line:#d9e0e7;--font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+:root{--focus:#ffbf47;--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.t-plombier{--bg:#f1f7f9;--surface:#fff;--ink:#0a2733;--mute:#3b5461;--line:#c5dce6;--brand:#0b5f8a;--on:#fff;--hero-bg:#dcedf4;--hero-ink:#0a2733;--hero-mute:#27424e;--accent:#b2531f;--glow:#8fd3f0;--dark:#0a2733;--r:999px;--head:"Trebuchet MS","Segoe UI",system-ui,sans-serif}
+.t-electricien{--bg:#eceef5;--surface:#fff;--ink:#14183a;--mute:#454b6e;--line:#cdd1e2;--brand:#14183a;--on:#ffc61a;--hero-bg:#ffc61a;--hero-ink:#14183a;--hero-mute:#2b2f55;--accent:#14183a;--glow:#ffc61a;--dark:#14183a;--r:4px;--head:Bahnschrift,"DIN Alternate","Arial Narrow","Roboto Condensed",system-ui,sans-serif}
+.t-chauffagiste{--bg:#f3f5f9;--surface:#fff;--ink:#17243d;--mute:#47536b;--line:#d3d9e6;--brand:#ff9442;--on:#17243d;--hero-bg:#17243d;--hero-ink:#f4f6fa;--hero-mute:#c9d3e6;--accent:#c2410c;--glow:#ff9442;--dark:#17243d;--r:14px;--head:Georgia,"Iowan Old Style","Palatino Linotype",serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.55;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:17px;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-text-size-adjust:100%}
 a{color:inherit}
-:focus-visible{outline:3px solid #ffbf47;outline-offset:3px;box-shadow:0 0 0 6px #14202b}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;box-shadow:0 0 0 6px #14202b}
 .skip{position:absolute;left:-999px;top:8px;background:#fff;color:#14202b;padding:8px 14px;border-radius:8px;z-index:50}
 .skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .wrap{max-width:1040px;margin:0 auto;padding:0 18px}
-.maq{background:#14202b;color:#e1e8ee;font-size:13px;text-align:center;padding:7px 10px}
-.maq.warn{background:#7a1f12;color:#fff;font-weight:700}
-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:58px}
-.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:17px;letter-spacing:-.01em;min-width:0;text-decoration:none}
-.logo svg{flex:none}
+.maq{background:#20242c;color:#e3e7ee;font-size:13px;text-align:center;padding:6px 10px}
+h1,h2,h3{font-family:var(--head);line-height:1.15;letter-spacing:-.01em}
+header{position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:800;font-size:18px;min-width:0;text-decoration:none}
+.logo i{flex:none;width:12px;height:12px;background:var(--accent);border-radius:var(--r)}
+.t-plombier .logo i{border-radius:0 50% 50% 50%;transform:rotate(-45deg)}
 .logo span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--on);font-weight:700;text-decoration:none;padding:12px 22px;border-radius:999px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--brand);color:var(--on);font-weight:800;text-decoration:none;padding:14px 26px;border-radius:var(--r);min-height:52px;line-height:1.2}
 .btn:hover{filter:brightness(1.08)}
-.btn.sm{padding:9px 18px;font-size:15px}
-.btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
-.hero{background:linear-gradient(135deg,#0f1b27 0%,#1c2f42 100%);color:#fff;padding:56px 0 64px;border-bottom:6px solid var(--accent)}
-.badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);padding:5px 12px;border-radius:999px;font-size:14px;margin-bottom:16px}
-h1{font-size:clamp(28px,7vw,48px);line-height:1.1;font-weight:800;letter-spacing:-.02em;max-width:18ch}
-h1 em{font-style:normal;color:var(--light)}
-.hero p.lead{margin:16px 0 26px;font-size:17px;color:#e1e8ee;max-width:46ch}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-.rate{margin-top:26px;font-size:15px;color:#e1e8ee}
-.rate b{color:#fff}
-.stars{color:#f5b301;letter-spacing:2px}
-section{padding:46px 0}
-h2{font-size:clamp(22px,5vw,30px);font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
-h3{font-size:17px;margin-bottom:4px}
-.sub{color:var(--mute);margin-bottom:24px}
-.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
-.card .ic{width:40px;height:40px;border-radius:10px;background:var(--accent);color:var(--on);margin-bottom:12px;display:grid;place-items:center}
-.card p{color:var(--mute);font-size:15px}
-.quote{border-left:4px solid var(--accent)}
-.quote p{color:var(--ink);font-style:italic}
-.quote small{display:block;margin-top:10px;color:var(--mute)}
-.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.two{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.contact{background:#14202b;color:#fff}
-.contact .sub{color:#c3cfda}
-.big{font-size:clamp(26px,7vw,38px);font-weight:800;color:var(--light);display:inline-block;margin:6px 0 12px}
+.btn svg{flex:none}
+.btn.sm{min-height:44px;padding:9px 20px;font-size:16px}
+.btn.big{font-size:20px;padding:16px 28px;min-height:60px}
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:30px 0 34px;overflow:hidden}
+.hero .wrap{display:grid;gap:26px}
+h1{font-size:clamp(32px,8.6vw,54px);font-weight:800;max-width:18ch;text-wrap:balance}
+.t-chauffagiste h1{font-weight:700}
+.lead{margin-top:14px;font-size:18px;color:var(--hero-mute);max-width:36ch}
+.cta{margin-top:24px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.cta .btn{align-self:stretch}
+.hint{font-size:15px;color:var(--hero-mute)}
+.rate{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px;margin-top:22px;font-size:16px}
+.stars{display:inline-flex;gap:2px}
+.stars svg{width:20px;height:20px;fill:#e8a400}
+.stars svg.off{fill:none;stroke:#e8a400;stroke-width:1.6}
+.t-electricien .stars svg{fill:#14183a}
+.t-electricien .stars svg.off{stroke:#14183a}
+.t-chauffagiste .stars svg{fill:#ffb347}
+.t-chauffagiste .stars svg.off{stroke:#ffb347}
+.art{display:block;width:100%;max-width:460px;height:auto;margin:0 auto}
+.sec{padding:44px 0}
+.sec.alt{background:var(--surface);border-block:1px solid var(--line)}
+h2{font-size:clamp(25px,6vw,34px);font-weight:800;margin-bottom:8px}
+.sub{color:var(--mute);margin-bottom:24px;max-width:46ch}
+.svc{list-style:none;display:grid;gap:0 44px}
+.svc h3{font-size:19px;margin-bottom:4px}
+.svc p{color:var(--mute);font-size:16px}
+.t-plombier .svc li{position:relative;padding:16px 0 16px 34px;border-bottom:1px solid var(--line)}
+.t-plombier .svc li::before{content:"";position:absolute;left:4px;top:25px;width:13px;height:13px;background:var(--brand);border-radius:0 50% 50% 50%;transform:rotate(-45deg)}
+.t-electricien .svc{gap:12px}
+.t-electricien .svc li{background:var(--surface);border:2px solid var(--ink);border-radius:4px;padding:16px 14px 14px;position:relative;border-top-width:18px}
+.t-electricien .svc li::before{content:"";position:absolute;right:12px;top:-14px;width:22px;height:10px;background:#ffc61a;border-radius:2px}
+.t-chauffagiste .svc{gap:6px 40px}
+.t-chauffagiste .svc li{border-left:5px solid var(--accent);padding:10px 0 10px 16px;margin:8px 0}
+.etapes{list-style:none;max-width:560px}
+.etapes li{position:relative;display:grid;grid-template-columns:48px 1fr;gap:16px;padding-bottom:26px}
+.etapes li:last-child{padding-bottom:0}
+.etapes li::after{content:"";position:absolute;left:21px;top:50px;bottom:2px;width:6px;background:var(--accent);border-radius:3px}
+.etapes li:last-child::after{display:none}
+.etapes b{display:grid;place-items:center;width:48px;height:48px;border-radius:var(--r);background:var(--brand);color:var(--on);font:800 22px var(--head)}
+.etapes h3{font-size:20px;margin:6px 0 2px}
+.etapes p{color:var(--mute)}
+.t-electricien .etapes li::after{width:4px;left:22px;background:repeating-linear-gradient(var(--ink) 0 8px,transparent 8px 14px);border-radius:0}
+.t-electricien .etapes b{border-radius:4px}
+.t-chauffagiste .etapes li:nth-child(1) b{background:#52668f;color:#fff}
+.t-chauffagiste .etapes li:nth-child(2) b{background:#b45309;color:#fff}
+.t-chauffagiste .etapes li:nth-child(3) b{background:#c2410c;color:#fff}
+.t-chauffagiste .etapes li:nth-child(1)::after{background:linear-gradient(#52668f,#b45309)}
+.t-chauffagiste .etapes li:nth-child(2)::after{background:linear-gradient(#b45309,#c2410c)}
+.pres{display:grid;gap:26px}
+.pres p{max-width:52ch}
+.pres p+p{margin-top:10px;color:var(--mute);font-size:16px}
+.avis{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-box,14px);padding:22px;align-self:start}
+.t-plombier .avis{--r-box:22px}
+.t-electricien .avis{--r-box:4px;border:2px solid var(--ink)}
+.avis .note{font:800 46px/1 var(--head)}
+.avis .note small{font-size:20px;font-weight:700;color:var(--mute)}
+.avis .stars{margin:8px 0 4px}
+.avis .stars svg{width:24px;height:24px}
+.avis p{color:var(--mute);margin-bottom:14px}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink);padding:10px 20px;min-height:48px;font-size:16px}
+.communes{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+.communes li{border:1px solid var(--line);background:var(--surface);padding:5px 14px;border-radius:var(--r);font-size:16px}
+.communes li:first-child{background:var(--brand);color:var(--on);border-color:var(--brand);font-weight:700}
+.t-electricien .communes li{border-radius:4px}
+.contact{background:var(--dark);color:#fff;padding:44px 0 50px}
+.contact h2{color:#fff}
+.contact p{color:#d6dde8}
 .contact a{color:#fff}
-.contact a.big{color:var(--light)}
-.lnk{color:var(--ink);font-weight:600}
-footer{background:#0d151d;color:#b4c1cd;font-size:14px;padding:24px 0 90px}
+.tel{display:inline-block;margin:6px 0 10px;font:800 clamp(34px,10vw,50px)/1.1 var(--head);color:var(--glow);text-decoration:none}
+.contact .info{margin-top:6px}
+footer{background:#0b1118;color:#b9c4d0;font-size:14px;padding:24px 0 96px}
 footer p+p{margin-top:6px}
 footer a{color:#fff}
-.fab{position:fixed;left:14px;right:14px;bottom:14px;z-index:20}
-.fab .btn{width:100%;padding:15px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
-.todo{background:#fff3cd;color:#5c4400;padding:0 6px;border-radius:4px}
-@media(min-width:760px){.fab{display:none}footer{padding-bottom:24px}}
-@media(max-width:759px){header .btn{display:none}.btn{white-space:normal;text-align:center}.grid,.two{grid-template-columns:1fr}}
+.fab{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:20}
+.fab .btn{width:100%;box-shadow:0 0 0 3px #fff,0 6px 18px rgba(0,0,0,.4)}
+.t-chauffagiste .fab .btn{box-shadow:0 0 0 3px #17243d,0 6px 18px rgba(0,0,0,.4)}
+@media(min-width:560px){.svc{grid-template-columns:1fr 1fr}.t-electricien .svc{gap:20px 14px}}
+@media(min-width:860px){
+.hero{padding:56px 0 64px}.hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:40px}
+.cta{flex-direction:row;align-items:center}.cta .btn{align-self:auto}
+.pres{grid-template-columns:1.2fr .8fr;gap:48px}
+.t-electricien .svc{grid-template-columns:repeat(3,1fr)}
+.fab{display:none}footer{padding-bottom:24px}
+}
+@media(max-width:859px){header .btn{display:none}}
+@media(prefers-reduced-motion:no-preference){
+.t-plombier .tuyau{stroke-dasharray:1;animation:trace 1.1s ease-out backwards}
+.t-plombier .volant{transform-box:fill-box;transform-origin:center;animation:volant .6s ease-in-out 1.1s backwards}
+.t-plombier .goutte{transform-box:fill-box;transform-origin:50% 0;animation:goutte 2.4s cubic-bezier(.5,0,.9,.6) 1.6s backwards}
+.t-plombier .onde{transform-box:fill-box;transform-origin:center;animation:onde 2.4s ease-out 1.6s backwards}
+.t-electricien .levier{animation:leve .35s cubic-bezier(.3,1.5,.5,1) backwards}
+.t-electricien .led{animation:led .2s linear backwards}
+.t-electricien .cable{stroke-dasharray:1;animation:trace .5s ease-out backwards}
+.t-electricien .mod:nth-child(1) *{animation-delay:.2s}.t-electricien .mod:nth-child(2) *{animation-delay:.45s}.t-electricien .mod:nth-child(3) *{animation-delay:.7s}
+.t-electricien .mod:nth-child(4) *{animation-delay:.95s}.t-electricien .mod:nth-child(5) *{animation-delay:1.2s}.t-electricien .mod:nth-child(6) *{animation-delay:1.45s}
+.t-electricien .cable:nth-child(1){animation-delay:.5s}.t-electricien .cable:nth-child(2){animation-delay:.75s}.t-electricien .cable:nth-child(3){animation-delay:1s}
+.t-electricien .cable:nth-child(4){animation-delay:1.25s}.t-electricien .cable:nth-child(5){animation-delay:1.5s}.t-electricien .cable:nth-child(6){animation-delay:1.75s}
+.t-chauffagiste .ailette{animation:chauffe .5s ease-out backwards}
+.t-chauffagiste .ailette:nth-child(1){animation-delay:.1s}.t-chauffagiste .ailette:nth-child(2){animation-delay:.25s}.t-chauffagiste .ailette:nth-child(3){animation-delay:.4s}.t-chauffagiste .ailette:nth-child(4){animation-delay:.55s}
+.t-chauffagiste .ailette:nth-child(5){animation-delay:.7s}.t-chauffagiste .ailette:nth-child(6){animation-delay:.85s}.t-chauffagiste .ailette:nth-child(7){animation-delay:1s}.t-chauffagiste .ailette:nth-child(8){animation-delay:1.15s}
+.t-chauffagiste .vague{animation:monte 1.6s ease-out backwards}
+.t-chauffagiste .vague:nth-child(1){animation-delay:1.5s}.t-chauffagiste .vague:nth-child(2){animation-delay:1.8s}.t-chauffagiste .vague:nth-child(3){animation-delay:2.1s}
+}
+@keyframes trace{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes volant{50%{transform:scaleX(.3)}}
+@keyframes goutte{0%{transform:scale(.2);opacity:1}22%{transform:scale(1)}62%{transform:translateY(66px) scale(1)}63%{opacity:0;transform:translateY(0) scale(.2)}75%{opacity:0}100%{opacity:1;transform:scale(1)}}
+@keyframes onde{0%,60%{transform:scale(.2);opacity:0}62%{opacity:1;transform:scale(.3)}80%{transform:scale(1.5);opacity:0}100%{opacity:0}}
+@keyframes leve{from{transform:translateY(22px)}}
+@keyframes led{from{fill:#8f96b5}}
+@keyframes chauffe{from{fill:#52668f}}
+@keyframes monte{from{opacity:0;transform:translateY(16px)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
-<body>
+<body class="t-electricien">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="s" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.2 6.6.8-4.9 4.6 1.3 6.7L12 17.5l-5.9 3.3 1.3-6.7L2.5 9.5l6.6-.8z" stroke-linejoin="round"/></symbol></svg>
 <a class="skip" href="#contenu">Aller au contenu</a>
-<div class="maq warn" role="note">Maquette – non publiée. Proposée par Automaton.</div>
+<div class="maq" role="note">Maquette proposée par Automaton – non publiée</div>
 <header><div class="wrap">
-<a class="logo" href="#top"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false"><rect width="28" height="28" rx="7" fill="#f2a000"/><path d="M8 20l8-8m-2-3a4 4 0 0 1 5 5l-2-1-1-2zM7 21l2-2" fill="none" stroke="#14202b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>DVBE</span></a>
+<a class="logo" href="#top"><i></i><span>DVBE</span></a>
 <a class="btn sm" href="tel:+33620455646" aria-label="Appeler DVBE au 06 20 45 56 46">Appeler</a>
 </div></header>
 
 <main id="contenu">
 <div class="hero" id="top"><div class="wrap">
-<span class="badge">Électricien à Rambouillet</span>
-<h1>Dépannage rapide à <em>Rambouillet</em> et alentours</h1>
-<p class="lead">DVBE intervient vite, répare proprement et vous donne un prix clair avant de commencer.</p>
+<div>
+<h1>Panne de courant à Rambouillet ? Appelez directement.</h1>
+<p class="lead">DVBE, électricien à Rambouillet. Un disjoncteur qui saute, une prise morte : parlez-en au téléphone.</p>
 <div class="cta">
-<a class="btn" href="tel:+33620455646">Appeler le 06 20 45 56 46</a>
-<a class="btn ghost" href="#services">Voir nos services</a>
+<a class="btn big" href="tel:+33620455646"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 3h3l1.5 4.3-2 1.4a11 11 0 0 0 5.2 5.2l1.4-2L20 13.4v3A3 3 0 0 1 17 19.4 14.4 14.4 0 0 1 3.6 6 3 3 0 0 1 6.6 3z" fill="currentColor"/></svg>Appeler le 06 20 45 56 46</a>
 </div>
-<p class="rate"><span class="stars" aria-hidden="true">★★★★★</span> <b>5,0/5</b> sur 30 avis clients</p>
+<p class="rate"><span class="stars" role="img" aria-label="Note de 5,0 sur 5"><svg aria-hidden="true"><use href="#s"/></svg><svg aria-hidden="true"><use href="#s"/></svg><svg aria-hidden="true"><use href="#s"/></svg><svg aria-hidden="true"><use href="#s"/></svg><svg aria-hidden="true"><use href="#s"/></svg></span> <span><b>5,0 sur 5</b>, 30 avis Google</span></p>
+</div>
+<svg class="art" viewBox="0 0 360 230" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<g fill="none" stroke="#14183a" stroke-width="4" stroke-linecap="round">
+<path class="cable" pathLength="1" d="M55 80V-4"/><path class="cable" pathLength="1" d="M105 80V8"/><path class="cable" pathLength="1" d="M155 80V-4"/>
+<path class="cable" pathLength="1" d="M205 80V8"/><path class="cable" pathLength="1" d="M255 80V-4"/><path class="cable" pathLength="1" d="M305 80V8"/>
+</g>
+<rect x="14" y="40" width="332" height="184" rx="12" fill="#14183a"/>
+<rect x="22" y="112" width="316" height="12" rx="3" fill="#5b6190"/>
+<g>
+<g class="mod"><rect x="33" y="60" width="44" height="150" rx="5" fill="#e9ecf5"/><circle class="led" cx="55" cy="74" r="4.5" fill="#ffc61a" stroke="#14183a" stroke-width="1.5"/><rect x="43" y="88" width="24" height="46" rx="4" fill="#bcc3da"/><rect class="levier" x="45" y="90" width="20" height="20" rx="3" fill="#14183a"/><rect x="41" y="150" width="28" height="44" rx="3" fill="#fff"/><path d="M46 160h18M46 170h18M46 180h12" stroke="#14183a" stroke-width="3" stroke-linecap="round"/></g>
+<g class="mod"><rect x="83" y="60" width="44" height="150" rx="5" fill="#e9ecf5"/><circle class="led" cx="105" cy="74" r="4.5" fill="#ffc61a" stroke="#14183a" stroke-width="1.5"/><rect x="93" y="88" width="24" height="46" rx="4" fill="#bcc3da"/><rect class="levier" x="95" y="90" width="20" height="20" rx="3" fill="#14183a"/><rect x="91" y="150" width="28" height="44" rx="3" fill="#fff"/><path d="M96 160h18M96 170h18M96 180h12" stroke="#14183a" stroke-width="3" stroke-linecap="round"/></g>
+<g class="mod"><rect x="133" y="60" width="44" height="150" rx="5" fill="#e9ecf5"/><circle class="led" cx="155" cy="74" r="4.5" fill="#ffc61a" stroke="#14183a" stroke-width="1.5"/><rect x="143" y="88" width="24" height="46" rx="4" fill="#bcc3da"/><rect class="levier" x="145" y="90" width="20" height="20" rx="3" fill="#14183a"/><rect x="141" y="150" width="28" height="44" rx="3" fill="#fff"/><path d="M146 160h18M146 170h18M146 180h12" stroke="#14183a" stroke-width="3" stroke-linecap="round"/></g>
+<g class="mod"><rect x="183" y="60" width="44" height="150" rx="5" fill="#e9ecf5"/><circle class="led" cx="205" cy="74" r="4.5" fill="#ffc61a" stroke="#14183a" stroke-width="1.5"/><rect x="193" y="88" width="24" height="46" rx="4" fill="#bcc3da"/><rect class="levier" x="195" y="90" width="20" height="20" rx="3" fill="#14183a"/><rect x="191" y="150" width="28" height="44" rx="3" fill="#fff"/><path d="M196 160h18M196 170h18M196 180h12" stroke="#14183a" stroke-width="3" stroke-linecap="round"/></g>
+<g class="mod"><rect x="233" y="60" width="44" height="150" rx="5" fill="#e9ecf5"/><circle class="led" cx="255" cy="74" r="4.5" fill="#ffc61a" stroke="#14183a" stroke-width="1.5"/><rect x="243" y="88" width="24" height="46" rx="4" fill="#bcc3da"/><rect class="levier" x="245" y="90" width="20" height="20" rx="3" fill="#14183a"/><rect x="241" y="150" width="28" height="44" rx="3" fill="#fff"/><path d="M246 160h18M246 170h18M246 180h12" stroke="#14183a" stroke-width="3" stroke-linecap="round"/></g>
+<g class="mod"><rect x="283" y="60" width="44" height="150" rx="5" fill="#e9ecf5"/><circle class="led" cx="305" cy="74" r="4.5" fill="#ffc61a" stroke="#14183a" stroke-width="1.5"/><rect x="293" y="88" width="24" height="46" rx="4" fill="#bcc3da"/><rect class="levier" x="295" y="90" width="20" height="20" rx="3" fill="#14183a"/><rect x="291" y="150" width="28" height="44" rx="3" fill="#fff"/><path d="M296 160h18M296 170h18M296 180h12" stroke="#14183a" stroke-width="3" stroke-linecap="round"/></g>
+</g>
+</svg>
+
 </div></div>
 
-<section id="services" aria-labelledby="t-serv"><div class="wrap">
-<h2 id="t-serv">Nos services</h2>
-<p class="sub">Une équipe locale, des interventions soignées.</p>
-<div class="grid">
-<div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Installation électrique</h3><p>Intervention soignée, devis clair avant travaux.</p></div>
-<div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Dépannage</h3><p>Intervention soignée, devis clair avant travaux.</p></div>
-<div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Mise aux normes</h3><p>Intervention soignée, devis clair avant travaux.</p></div>
+<section class="sec" id="services" aria-labelledby="t-serv"><div class="wrap">
+<h2 id="t-serv">Ce que fait DVBE</h2>
+<p class="sub">Dépannage et travaux d&#x27;électricité pour votre logement.</p>
+<ul class="svc">
+<li><h3>Dépannage électrique</h3><p>Disjoncteur qui saute, prise ou éclairage hors service, panne partielle ou totale.</p></li>
+<li><h3>Tableau électrique</h3><p>Remplacement ou rénovation du tableau et de ses disjoncteurs.</p></li>
+<li><h3>Mise aux normes</h3><p>Remise en état d&#x27;une installation électrique ancienne.</p></li>
+<li><h3>Prises et éclairage</h3><p>Ajout ou déplacement de prises, d&#x27;interrupteurs et de luminaires.</p></li>
+<li><h3>Recherche de panne</h3><p>Diagnostic d&#x27;un court-circuit, d&#x27;une fuite de courant ou d&#x27;un défaut.</p></li>
+<li><h3>Raccordements</h3><p>Plaque de cuisson, four, chauffe-eau, volets roulants.</p></li>
+</ul>
+</div></section>
+
+<section class="sec alt" aria-labelledby="t-etapes"><div class="wrap">
+<h2 id="t-etapes">Comment ça se passe</h2>
+<p class="sub">Trois étapes, de votre appel à la fin de l'intervention.</p>
+<ol class="etapes">
+<li><b aria-hidden="true">1</b><div><h3>Vous appelez</h3><p>Au 06 20 45 56 46. Dites ce qui se passe et où vous habitez.</p></div></li>
+<li><b aria-hidden="true">2</b><div><h3>L&#x27;intervention</h3><p>DVBE se rend chez vous, repère la cause du problème et vous explique ce qu&#x27;il faut faire.</p></div></li>
+<li><b aria-hidden="true">3</b><div><h3>Devis ou paiement</h3><p>Pour des travaux importants, un devis vous est remis avant de commencer. Pour une réparation simple, vous réglez à la fin de l&#x27;intervention.</p></div></li>
+</ol>
+</div></section>
+
+<section class="sec" aria-labelledby="t-pres"><div class="wrap pres">
+<div>
+<h2 id="t-pres">Présentation</h2>
+<p>DVBE est un électricien installé à Rambouillet. Cette entreprise assure des dépannages et travaux d&#x27;électricité. Le plus simple pour décrire votre besoin ou demander un devis : l&#x27;appeler.</p>
+<p>La note et le nombre d'avis viennent de la fiche Google de DVBE.</p>
+</div>
+<div class="avis">
+<div class="note">5,0<small> / 5</small></div>
+<div class="stars" aria-hidden="true"><svg aria-hidden="true"><use href="#s"/></svg><svg aria-hidden="true"><use href="#s"/></svg><svg aria-hidden="true"><use href="#s"/></svg><svg aria-hidden="true"><use href="#s"/></svg><svg aria-hidden="true"><use href="#s"/></svg></div>
+<p>30 avis sur Google</p>
+<a class="btn ghost" href="https://www.google.com/maps/place/DVBE" rel="noopener noreferrer" target="_blank">Voir les avis sur Google<span class="sr"> (nouvel onglet)</span></a>
 </div>
 </div></section>
 
-<section class="alt" aria-labelledby="t-avis"><div class="wrap">
-<h2 id="t-avis">Avis clients</h2>
-<p class="sub"><span class="stars" aria-hidden="true">★★★★★</span> 5,0/5 - 30 avis</p>
-<div class="two">
-<figure class="card quote"><blockquote><p>« Exemple d&#x27;avis : intervention rapide et travail propre. »</p></blockquote><small>Exemple, à remplacer</small></figure>
-<figure class="card quote"><blockquote><p>« Exemple d&#x27;avis : ponctuel, prix annoncé respecté. »</p></blockquote><small>Exemple, à remplacer</small></figure>
-</div>
-</div></section>
-
-<section aria-labelledby="t-zone"><div class="wrap">
-<div class="two">
-<div class="card"><h2 id="t-zone">Zone d'intervention</h2><p class="sub" style="margin:0">Rambouillet et communes voisines. Appelez-nous pour confirmer votre secteur.</p><p style="margin-top:12px"><a class="lnk" href="https://www.google.com/maps/place/DVBE" rel="noopener noreferrer" target="_blank">Voir notre fiche et notre adresse (nouvel onglet)</a></p></div>
-<div class="card"><h2>Horaires</h2><p class="sub" style="margin:0">Ouvert, ferme à 20:00</p></div>
-</div>
+<section class="sec alt" aria-labelledby="t-zone"><div class="wrap">
+<h2 id="t-zone">Zone d'intervention</h2>
+<p class="sub" style="margin-bottom:0">Rambouillet et les communes proches.</p>
+<ul class="communes">
+<li>Rambouillet</li>
+<li>Vieille-Église-en-Yvelines</li>
+<li>Gazeran</li>
+<li>Le Perray-en-Yvelines</li>
+<li>Auffargis</li>
+<li>Poigny-la-Forêt</li>
+<li>Clairefontaine-en-Yvelines</li>
+<li>Orcemont</li>
+</ul>
+<p class="hint" style="color:var(--mute)">Pas sûr que votre adresse soit couverte ? Appelez, la réponse est rapide.</p>
 </div></section>
 
 <section class="contact" id="contact" aria-labelledby="t-contact"><div class="wrap">
-<h2 id="t-contact">Contact</h2>
-<p class="sub">Devis gratuit, réponse rapide.</p>
-<a class="big" href="tel:+33620455646">06 20 45 56 46</a>
+<h2 id="t-contact">Appeler DVBE</h2>
+<a class="tel" href="tel:+33620455646">06 20 45 56 46</a>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-<p><b>DVBE</b> - Électricien - Rambouillet</p>
-<p><a href="mentions-legales.html">Mentions légales et données personnelles</a></p>
+<p><b>DVBE</b>, électricien à Rambouillet</p>
+<p>Mentions légales complètes à la mise en ligne.</p>
 <p>Ce site n'utilise aucun cookie et ne collecte aucune donnée.</p>
 <p>Réalisation : Automaton.</p>
 </div></footer>
-<div class="fab"><a class="btn" href="tel:+33620455646">Appeler le 06 20 45 56 46</a></div>
+<div class="fab"><a class="btn big" href="tel:+33620455646"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 3h3l1.5 4.3-2 1.4a11 11 0 0 0 5.2 5.2l1.4-2L20 13.4v3A3 3 0 0 1 17 19.4 14.4 14.4 0 0 1 3.6 6 3 3 0 0 1 6.6 3z" fill="currentColor"/></svg>Appeler le 06 20 45 56 46</a></div>
 </body>
 </html>
